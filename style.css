@@ -1,0 +1,63 @@
+body, ::after,::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-theme : rgba(24, 23, 23, 0.938);
+    --light-theme : rgb(231, 230, 230);
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20em;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+    margin-left: 50%;
+    position: relative;
+}
+
+.toggle-btn > img {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.light >.toggle-btn > .dark-sun{
+    transform: translateX(10px);
+    transition: transform 10ms ease-out;
+    opacity: 0;
+}
+
+.dark >.toggle-btn > .sun{
+    transform: translateX(-10px);
+    transition: transform 10ms ease-out;
+    opacity: 0;
+}
+
+.light{
+    background-color: var(--light-theme);
+}
+
+.dark {
+    color: rgb(255, 255, 255);
+    background-color: var(--dark-theme);
+}
+
+
+.light >.toggle-btn > .sun{
+    transform: rotate(180deg);
+    transition: transform 500ms ease-out;
+}
+.dark >.toggle-btn > .dark-sun{
+    transform: rotate(180deg);
+    transition: transform 500ms ease-out;
+}
+
+
